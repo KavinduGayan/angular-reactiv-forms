@@ -1,0 +1,11 @@
+<label>
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  Name:
+  <input type="text" formControlName="name">
+  Age:
+  <input type="text" formControlName="age">
+  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>
+</label>  
+
+<button (click)="setDetails()">Set Details</button>
